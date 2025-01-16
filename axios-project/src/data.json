@@ -1,0 +1,19 @@
+{
+    "student":[
+{
+        "name":"Neha",
+        "Age" :"24",
+        "Contact":123,
+        "City": "Bhopal"
+},
+
+{
+
+    "name":"Shreya",
+    "Age":"23",
+    "Contact":123,
+    "City":"Bhopal"
+}
+
+    ]
+}
