@@ -17,6 +17,7 @@ function hinput(e){
   let {name,value}=e.target
   setEditdata({...editdata,[name]:value})
 }
+
  function submitform(e){
 e.preventDefault()
 axios.post("http://localhost:3000/student"  ,form)
@@ -26,6 +27,12 @@ axios.post("http://localhost:3000/student"  ,form)
   function myDel(id) {
     axios.delete(`http://localhost:3000/student/${id}`)
       .then(res => alert("deleted"));
+  }
+
+  function finalsubmit(e){
+    e.preventDefault();
+    axios.put(`http://localhost:3000/student/${editdata.id}`,editdata)
+    .then(r=>alert("updated"))
   }
   useEffect(() => {
     axios.get("http://localhost:3000/student")
